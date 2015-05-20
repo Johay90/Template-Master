@@ -1,0 +1,61 @@
+html{
+  background-color: #D8D8D8;
+}
+
+#wrapper{
+  background-color: #9ED797;
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  height: 800px;
+  border: solid 1px black;
+}
+
+#banner{
+  background-image:url("img/banner.jpg");
+  width: 100%;
+  min-height: 200px;
+}
+
+#nav{
+  height: 75px;
+  background-color: #4D7349;
+}
+
+ul, li{
+  display: inline-block;
+  padding: 0;
+  margin-top: 0;
+}
+
+li{
+  min-width:237px;
+  height: 72px;
+  padding: none;
+}
+
+a.navbar{
+  font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+  line-height: 75px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover.navbar{
+  background-color: #6BAB64;
+}
+
+p{
+	font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
