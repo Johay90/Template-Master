@@ -3,6 +3,7 @@
   <head>
     <title>Template master - by Jonathan Mummery</title>
     <link rel="Stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:700italic,300,400' rel='stylesheet' type='text/css'>
   </head>
 
@@ -18,24 +19,45 @@
 
     <div id="content-left">
       <h1>About Template Master</h1>
-      <p>Lorem ipsum dolor sit amet, ne magna definiebas qui, unum decore dolorum quo at, id per autem hendrerit. Saepe utamur nusquam vix ne. Novum scripta ex eam. Ad sed alia corrumpit assentior. Ad lorem veniam qui, sonet volutpat explicari ex nec.</p><br />
+      <p>Template Master is a platform to share and download new designs. All content on this website is free, and no promotional material will be uploaded here.</p>
 
-      <p>Cu duo democritum mediocritatem, mucius labores ius cu. Et per appetere singulis sensibus. Erant molestie no ius. Id qui quod copiosae dignissim, audiam impetus democritum te sed.</p><br />
+      <p>There is countless designs on this website ranging from a very simple 3 column layouts to a fully fledged one page multi-purpose designs. </p>
 
-      <p>Sed an tota velit intellegat, mei postulant petentium persecuti at. Et sed option volumus, ei nusquam legendos mei. Usu nonumy altera te, facer inani invenire quo te. At usu suas autem erant, vix nemore fabulas id. Soluta labitur ceteros ut nam, denique persequeris eu his.</p><br />
+      <h1>Out of the box</h1>
+      <p>No experiance is needed, simply download and upload to your website directory and start using the website. All designs here are with you in mind; SImply coded to make it easier for you to edit and change them.</p>
 
-      <p>Eu eum porro similique, pro an aperiam facilisis, maiorum vituperata ei sit. Dignissim definitiones has no. Ex his utamur alterum dolores. Harum noster inimicus has no, te tale iisque mea. In noster principes vel, nec id alii ferri nostrum.</p><br />
+      <p>Also we have a feedback button where you can suggest small changed to layouts to serve the greater good</p>
 
-      <p>Velit quidam scripserit vel no. No lorem oportere reprehendunt vel, an eam consetetur efficiantur, idque cotidieque ea usu. Ad quo splendide expetendis. Vim mundi deleniti similique in.</p>
+      <h1>Changelog</h1>
+      <b>20-05-15</b><br />
+      &#8226; Main page (index) design completed</br >
+      &#8226; New footer links
 
     </div>
 
     <div id="content-right">
+      <h2>Newest uploads on Template Master</h2>
+        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
+        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
+        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
+        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
+
+      <h2>Popular on Template Master</h2>
+      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
+      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
+      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
+      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
 
     </div>
 
-    <div id="footer">
+  </div>
 
-    </div>
-
+  <div id="footer">
+    <a class="footer" href="#"> About</a>
+    <a class="footer" href="#"> Contact</a>
+    <a class="footer" href="#"> Terms of Use</a>
+    <a class="footer" href="#"> Privacy</a>
+    <a class="footer" href="#"> Like Us</a>
+    <a class="footer" href="#"> Follow us</a>
+    <p class="footer">Copyright © 2015 Jonathan Mummery. All Rights Reserved.</p>
   </div>
