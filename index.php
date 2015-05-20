@@ -24,7 +24,7 @@
       <p>There is countless designs on this website ranging from a very simple 3 column layouts to a fully fledged one page multi-purpose designs. </p>
 
       <h1>Out of the box</h1>
-      <p>No experiance is needed, simply download and upload to your website directory and start using the website. All designs here are with you in mind; SImply coded to make it easier for you to edit and change them.</p>
+      <p>No experience is needed, simply download and upload to your website directory and start using the website. All designs here are with you in mind; Simply coded to make it easier for you to edit and change them.</p>
 
       <p>Also we have a feedback button where you can suggest small changed to layouts to serve the greater good</p>
 
