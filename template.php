@@ -18,22 +18,14 @@
   <div id="wrapper">
 
     <div id="content-left">
-      <h1>About Template Master</h1>
-      <p>Template Master is a platform to share and download new designs. All content on this website is free, and no promotional material will be uploaded here.</p>
+      <!-- title, thumbnail, Description, tags -->
+      <a class="template" href="#"> Template Title Name</a><br />
+      <span style="color: #a5a0a0" >Tags: Javascript, PHP, HTML, CSS</span><br />
+      <p>Lorem ipsum dolor sit amet, quis nulla soluta no mea, sea viris soleat possim cu, tale postea erroribus ius et. Fabulas feugait elaboraret ei vim, eum ea mazim dicunt dignissim, vis ex porro simul. Sententiae conclusionemque ad vis, mazim everti id sed. Ne dicunt facilis nam, nemore atomorum sed ut, at diam omnium epicurei duo. Ne ignota phaedrum tractatos est, sed ei augue deseruisse moderatius. Sea ubique perfecto ex, mei ad posse primis.</p><br /><hr>
 
-      <p>There is countless designs on this website ranging from a very simple 3 column layouts to a fully fledged one page multi-purpose designs. </p>
-
-      <h1>Out of the box</h1>
-      <p>No experience is needed, simply download and upload to your website directory and start using the website. All designs here are with you in mind; Simply coded to make it easier for you to edit and change them.</p>
-
-      <p>Also we have a feedback button where you can suggest small changed to layouts to serve the greater good</p>
-
-      <h1>Changelog</h1>
-      <b>20-05-15</b><br />
-      &#8226; Main page (index) design completed</br >
-      &#8226; New footer links<br />
-      <b>21-05-15</b><br />
-      &#8226; Display Template page design done
+      <a class="template" href="#"> Template Title Name</a><br />
+      <span style="color: #a5a0a0" >Tags: Javascript, PHP, HTML, CSS</span><br />
+      <p>Lorem ipsum dolor sit amet, quis nulla soluta no mea, sea viris soleat possim cu, tale postea erroribus ius et. Fabulas feugait elaboraret ei vim, eum ea mazim dicunt dignissim, vis ex porro simul. Sententiae conclusionemque ad vis, mazim everti id sed. Ne dicunt facilis nam, nemore atomorum sed ut, at diam omnium epicurei duo. Ne ignota phaedrum tractatos est, sed ei augue deseruisse moderatius. Sea ubique perfecto ex, mei ad posse primis.</p><br /><hr>
 
     </div>
 
