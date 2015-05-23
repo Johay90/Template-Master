@@ -25,14 +25,18 @@ include "system/db.php";
       <?php
       $conn = dbh();
 
-      $sth = $conn->preparE("SELECT * FROM templates");
+      $sth = $conn->prepare("SELECT * FROM templates");
       $sth->execute();
       $rows = $sth->fetchAll();
 
       foreach ($rows as $row) {
        echo "<a class='template' href='#''>" . $row['title'] . "</a><br />";
        echo "<span style='color: #a5a0a0'>Tags: " . $row['tags'] . "</span><br />";
-       echo "<p>" . nl2br($row['description']) . "</p><br /><hr>"; // TODO: Limit description chars
+         if (strlen($row['description']) >= 300){
+           echo "<p>" . mb_strimwidth(nl2br($row['description']), 0, 300, "....") . "</p><br /><hr>";
+         }else{
+           echo "<p>" . nl2br($row['description']) . "</p><br /><hr>";
+         }
       }
       ?>
     </div>
