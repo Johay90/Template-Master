@@ -1,3 +1,7 @@
+<?php
+include "system/db.php";
+?>
+
 <html>
 <body>
   <head>
@@ -18,15 +22,19 @@
   <div id="wrapper">
 
     <div id="content-left">
-      <!-- title, thumbnail, Description, tags -->
-      <a class="template" href="#"> Template Title Name</a><br />
-      <span style="color: #a5a0a0" >Tags: Javascript, PHP, HTML, CSS</span><br />
-      <p>Lorem ipsum dolor sit amet, quis nulla soluta no mea, sea viris soleat possim cu, tale postea erroribus ius et. Fabulas feugait elaboraret ei vim, eum ea mazim dicunt dignissim, vis ex porro simul. Sententiae conclusionemque ad vis, mazim everti id sed. Ne dicunt facilis nam, nemore atomorum sed ut, at diam omnium epicurei duo. Ne ignota phaedrum tractatos est, sed ei augue deseruisse moderatius. Sea ubique perfecto ex, mei ad posse primis.</p><br /><hr>
+      <?php
+      $conn = dbh();
 
-      <a class="template" href="#"> Template Title Name</a><br />
-      <span style="color: #a5a0a0" >Tags: Javascript, PHP, HTML, CSS</span><br />
-      <p>Lorem ipsum dolor sit amet, quis nulla soluta no mea, sea viris soleat possim cu, tale postea erroribus ius et. Fabulas feugait elaboraret ei vim, eum ea mazim dicunt dignissim, vis ex porro simul. Sententiae conclusionemque ad vis, mazim everti id sed. Ne dicunt facilis nam, nemore atomorum sed ut, at diam omnium epicurei duo. Ne ignota phaedrum tractatos est, sed ei augue deseruisse moderatius. Sea ubique perfecto ex, mei ad posse primis.</p><br /><hr>
+      $sth = $conn->preparE("SELECT * FROM templates");
+      $sth->execute();
+      $rows = $sth->fetchAll();
 
+      foreach ($rows as $row) {
+       echo "<a class='template' href='#''>" . $row['title'] . "</a><br />";
+       echo "<span style='color: #a5a0a0'>Tags: " . $row['tags'] . "</span><br />";
+       echo "<p>" . nl2br($row['description']) . "</p><br /><hr>"; // TODO: Limit description chars
+      }
+      ?>
     </div>
 
     <div id="content-right">
