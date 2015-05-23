@@ -11,7 +11,7 @@
     <ul>
       <li><a class="navbar" href="index.php">Home</a></li>
       <li><a class="navbar" href="template.php">Templates</a></li>
-      <li><a class="navbar" href="#">Upload</a></li>
+      <li><a class="navbar" href="upload.php">Upload</a></li>
     </ul>
   </div>
 
@@ -33,7 +33,11 @@
       &#8226; Main page (index) design completed</br >
       &#8226; New footer links<br />
       <b>21-05-15</b><br />
-      &#8226; Display Template page design done
+      &#8226; Display Template page design done</br >
+      <b>23-05-15</b><br />
+      &#8226; Backend for display templates</br >
+      &#8226; Paging on display templates</br >
+      &#8226; Description limited on display template</br >
 
     </div>
 
