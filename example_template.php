@@ -1,3 +1,7 @@
+<?php
+include "system/db.php";
+?>
+
 <html>
 <body>
   <head>
@@ -18,15 +22,21 @@
   <div id="wrapper">
 
     <div id="content-left">
-      <!-- title, thumbnail, Description, tags -->
-      <h1>[Green/Grey] Simple HTML and CSS layout</h1>
-      <p>This design is a quick (ugly) mockup HTML and CSS design. It uses 4 div tags, a wrapper, nav bar, banner and the content. This design while not the best looking was made in mind of somebody wanting to edit the design, ie. It was made with ease of editting in mind. Most design changes can easily be made within the CSS without the need to edit any of the main content (html).</p>
+      <?php
+      $conn = dbh();
 
-      <p>This design is perfect for a newcomer to HTML and CSS whos wanting to test their knowledge and skills and start editting some code to make a nicer looking website.</p><br /><br />
+      $sth = $conn->prepare("SELECT * FROM templates WHERE id = 1"); // In the real template use GETID for template ID
+      $sth->execute();
+      $result = $sth->fetch(PDO::FETCH_ASSOC);
 
-      <a href="http://i.gyazo.com/5f8758a5f2e9f928be8d296e8b05198b.png"><img align="center" src="http://www.makeathumbnail.com/thumbnails/image367000.png" alt="Thumbnail provided by MakeAThumbnail.com" /></a><br /><br />
+      echo "<h1>" . $result['title'] . "</h1>";
 
-      <a align="center" class="template" href="#">Download Now!</a>
+      echo "<p>" . nl2br($result['description']) . "</p><br />";
+
+
+      echo "<a href='" . $result['image'] . "'><img align='center' src='" . $result['thumbnail'] . "' /></a><br /><br />";?>
+
+      <a align="center" class="template" href="#">Download Now!</a> <?php // TODO: Add backend for DL here after upload form is done ?>
 
     </div>
 
