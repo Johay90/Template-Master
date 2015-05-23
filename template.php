@@ -25,20 +25,45 @@ include "system/db.php";
       <?php
       $conn = dbh();
 
-      $sth = $conn->prepare("SELECT * FROM templates");
+      // paging copied from http://www.sourcecodester.com/tutorials/php/6091/page-navigation-using-pdo-query-phpmysql.html
+      if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };
+		  $start_from = ($page-1) * 4;
+      $sth = $conn->prepare("SELECT * FROM templates ORDER BY id ASC LIMIT $start_from, 4");
+      //end of paging
+
       $sth->execute();
       $rows = $sth->fetchAll();
 
       foreach ($rows as $row) {
        echo "<a class='template' href='#''>" . $row['title'] . "</a><br />";
        echo "<span style='color: #a5a0a0'>Tags: " . $row['tags'] . "</span><br />";
-         if (strlen($row['description']) >= 300){
-           echo "<p>" . mb_strimwidth(nl2br($row['description']), 0, 300, "....") . "</p><br /><hr>";
+         if (strlen($row['description']) >= 250){
+           echo "<p>" . mb_strimwidth(nl2br($row['description']), 0, 250, "....") . "</p><br /><hr>";
          }else{
            echo "<p>" . nl2br($row['description']) . "</p><br /><hr>";
          }
       }
       ?>
+
+    	<?php
+      // paging copied from http://www.sourcecodester.com/tutorials/php/6091/page-navigation-using-pdo-query-phpmysql.html
+    	$result = $conn->prepare("SELECT COUNT(id) FROM templates");
+    	$result->execute();
+    	$row = $result->fetch();
+    	$total_records = $row[0];
+    	$total_pages = ceil($total_records / 4);
+
+    	for ($i=1; $i<=$total_pages; $i++) {
+    				echo "<a href='template.php?page=".$i."'";
+    				if($page==$i)
+    				{
+    				echo "id=active";
+    				}
+    				echo ">";
+    				echo "".$i."</a> ";
+    	};
+    	?>
+
     </div>
 
     <div id="content-right">
