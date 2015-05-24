@@ -39,13 +39,14 @@ if (isset($_POST['submit'])){
         move_uploaded_file($_FILES["uploadFile"]["tmp_name"], $target_file);
 
         // Add entries to databse
-        $sth = $conn->prepare("INSERT INTO templates (title, tags, description, thumbnail, image, download) VALUES (:title, :tags, :description, :thumbnail, :image, :download)");
+        $sth = $conn->prepare("INSERT INTO templates (title, tags, description, thumbnail, image, download, upload_date) VALUES (:title, :tags, :description, :thumbnail, :image, :download, :upload_date)");
         $sth->bindParam(':title', $title);
         $sth->bindParam(':tags', $tags);
         $sth->bindParam(':description', $desc);
         $sth->bindParam(':thumbnail', $tnail);
         $sth->bindParam(':image', $img);
         $sth->bindParam(':download', $target_file);
+        $sth->bindParam(':upload_date', date('Y-m-d'));
         $sth->execute();
 
         //output
@@ -100,24 +101,10 @@ if (isset($_POST['submit'])){
       <span style="margin-left:90px; font-weight: bold">Upload files (.ZIP)</span>
       <input type="file" name="uploadFile" id="uploadFile" placeholder="Files"><br />
       <input name="submit" type="submit" value="Submit">
-    </form>?
+    </form>
+  </div>
 
-    </div>
-
-    <div id="content-right">
-      <h2>Newest uploads on Template Master</h2>
-        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-
-      <h2>Popular on Template Master</h2>
-      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-
-    </div>
+    <?php include "sidebar.php"; ?>
 
   </div>
 

@@ -35,7 +35,7 @@ include "system/db.php";
       $rows = $sth->fetchAll();
 
       foreach ($rows as $row) {
-       echo "<a class='template' href='example_template.php'>" . $row['title'] . "</a><br />";
+       echo "<a class='template' href='view_template.php?id=" . $row['id'] . "'>" . $row['title'] . "</a><br />";
        echo "<span style='color: #a5a0a0'>Tags: " . $row['tags'] . "</span><br />";
          if (strlen($row['description']) >= 250){
            echo "<p>" . mb_strimwidth(nl2br($row['description']), 0, 250, "....") . "</p><br /><hr>";
@@ -66,20 +66,7 @@ include "system/db.php";
 
     </div>
 
-    <div id="content-right">
-      <h2>Newest uploads on Template Master</h2>
-        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-
-      <h2>Popular on Template Master</h2>
-      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-
-    </div>
+    <?php include "sidebar.php"; ?>
 
   </div>
 

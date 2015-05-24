@@ -1,5 +1,10 @@
 <?php
 include "system/db.php";
+$getid = $_GET['id'];
+
+if (empty($getid)){
+  header("Location: index.php");
+}
 ?>
 
 <html>
@@ -25,35 +30,25 @@ include "system/db.php";
       <?php
       $conn = dbh();
 
-      $sth = $conn->prepare("SELECT * FROM templates WHERE id = 1"); // In the real template use GETID for template ID
+      $sth = $conn->prepare("SELECT * FROM templates WHERE id = :id"); // In the real template use GETID for template ID
+      $sth->bindParam(':id', $getid);
       $sth->execute();
       $result = $sth->fetch(PDO::FETCH_ASSOC);
+
+      if ($result['id'] == NULL){ header("Location: index.php"); }
 
       echo "<h1>" . $result['title'] . "</h1>";
 
       echo "<p>" . nl2br($result['description']) . "</p><br />";
 
 
-      echo "<a href='" . $result['image'] . "'><img align='center' src='" . $result['thumbnail'] . "' /></a><br /><br />";?>
+      echo "<a href='" . $result['image'] . "'><img align='center' src='" . $result['thumbnail'] . "' /></a><br /><br />";
 
-      <a align="center" class="template" href="#">Download Now!</a> <?php // TODO: Add backend for DL here after upload form is done ?>
-
-    </div>
-
-    <div id="content-right">
-      <h2>Newest uploads on Template Master</h2>
-        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-
-      <h2>Popular on Template Master</h2>
-      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
+      echo "<a align='center' class='template' href='" . $result['download'] . "'>Download Now!</a>"; ?>
 
     </div>
+
+    <?php include "sidebar.php"; ?>
 
   </div>
 

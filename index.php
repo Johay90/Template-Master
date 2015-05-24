@@ -1,3 +1,7 @@
+<?php
+include "system/db.php";
+$conn = dbh();
+?>
 <html>
 <body>
   <head>
@@ -39,23 +43,14 @@
       &#8226; Paging on display templates</br >
       &#8226; Description limited on display template</br >
       &#8226; Upload template design done</br >
+      <b>25-05-15</b><br />
+      &#8226; Upload form done</br >
+      &#8226; Sidebar (and backend for it) done</br >
+      &#8226; Template now displays all available templates (populated via database)</br >
 
     </div>
 
-    <div id="content-right">
-      <h2>Newest uploads on Template Master</h2>
-        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-        <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-
-      <h2>Popular on Template Master</h2>
-      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-      <a class="sidebar" href="#"> Design testing one testing one 1</a><br />
-
-    </div>
+    <?php include "sidebar.php"; ?>
 
   </div>
 
