@@ -38,6 +38,7 @@
       &#8226; Backend for display templates</br >
       &#8226; Paging on display templates</br >
       &#8226; Description limited on display template</br >
+      &#8226; Upload template design done</br >
 
     </div>
 
