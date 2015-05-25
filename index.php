@@ -55,11 +55,8 @@ $conn = dbh();
   </div>
 
   <div id="footer">
-    <a class="footer" href="#"> About</a>
-    <a class="footer" href="#"> Contact</a>
-    <a class="footer" href="#"> Terms of Use</a>
-    <a class="footer" href="#"> Privacy</a>
-    <a class="footer" href="#"> Like Us</a>
-    <a class="footer" href="#"> Follow us</a>
+    <a class="footer" href="terms.txt"> Terms of Use</a>
+    <a class="footer" href="https://www.facebook.com/jonathan.mummery"> Like Us</a>
+    <a class="footer" href="https://twitter.com/Johay90"> Follow us</a>
     <p class="footer">Copyright © 2015 Jonathan Mummery. All Rights Reserved.</p>
   </div>
